@@ -1,5 +1,5 @@
 <?php
-$servidor = "localhost";
+$servidor = "127.0.0";
 $usuario = "root";
 $senha = "";
 $banco = "DrawingLand_DB";
