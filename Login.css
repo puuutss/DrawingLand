@@ -1,61 +1,52 @@
 body{
-background-image:url("background.jpg");
+background-image:url("background1.jpg");
 background-repeat:repeat;
 }
 #area{
   width:32%;
   margin-left:40%;
-  margin-top:10%;
+  margin-top:20%;
   
 }
 #input1{
         font-family: 'Anton', sans-serif;
-        background-color:#0099D6;
+        background-color:#28a94b;
         border:none;
         color:white;
         text-align:center;
         text-decoration:none;
         display:inline-block;
         //margin-top:10;
-        margin-left:3%;
+        margin-left:4%;
         padding:5% 20%;
         font-size:200%;
         text-shadow: 1px 1px 10px black;
 }
 
-#Nickname{
+#input2{
         padding:5% 30%;
         font-size:120%;
-        margin-left:-17%;
+        margin-left:-22%;
         margin-top:10;
         margin-bottom:10px;
         
 
 
 }
-#UserKey{
-        padding:5% 30%;
-        font-size:120%;
-        margin-left:-17%;
-        margin-top:10;
-        margin-bottom:10px;
-        
 
-
-}
 #label1{
         font-family: 'Anton', sans-serif;
         color:white;
         text-shadow:1px 1px 15px black;
-        text-shadow:1px 1px 5px blue;
+        text-shadow:1px 1px 5px green;
         margin-left:13%;
-        font-size:200%;
+        font-size:150%;
 }
 #label2{
         font-family: 'Anton', sans-serif;
         color:white;
         text-shadow:1px 1px 15px black;
-        text-shadow:1px 1px 5px blue;
-        margin-left:27%;
-        font-size:200%;
+        text-shadow:1px 1px 5px green;
+        margin-left:25.5%;
+        font-size:150%;
 }

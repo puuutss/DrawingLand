@@ -1,35 +1,21 @@
 <html>
+
 <head>
         <title>DrawingLand - Cadastro</title>
-        <link rel = "stylesheet" type:"text/css" href="Cadastro.css">
-        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
         
+        <link rel = "stylesheet" type:"text/css" href="Cadastro.css">
+        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">     
 </head>
 <body>
         <div id="area">
                 
-                <form name = "cadastro" id = "cadastro"  method = "POST">
+                <form name = "cadastro" id = "cadastro" action = Insert.php method= "POST">
                         
-                        <label id = "label1">Nome de Usuario</label><br><input type="text" name="Nickname" id = "input2"><br>
-                        <label id = "label2">Senha</label><br><input type="password" name="UserKey" id = "input2"><br>
+                        <label id = "label1">Nome de Usuario</label><br><input type="text" name="Nickname" id = "Nickname"><br>
+                        <label id = "label2">Senha</label><br><input type="password" name="UserKey" id = "UserKey"><br>
+                        
                         <input type="submit" value= "Cadastrar" name="sent" id = "input1">
-                        <?php
-                        $host = "localhost";
-                        $user = "root";
-                        $pass = ""; 
-                        $banco = "DrawingLand_DB";
-                        $conexao = mysqli_connect($host,$user,$pass,$banco);
-                        // verifica a conexao
-                        if (mysqli_connect_errno())
-                          {
-                          echo "Erro ao conectar: " . mysqli_connect_error();
-                         }
-                        if (isset($_POST["submit"])) {
-                            $Nickname = $_POST['Nickname'];
-                            $UserKey = $_POST['UserKey'];
-                            $sql = mysqli_query($conexao,"INSERT INTO User(Nickname , UserKey) VALUES ('$Nickname' , '$Userkey'));
-                        }
-                        ?>
+                        
                         
                 </form>
         </div>

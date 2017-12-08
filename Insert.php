@@ -1,11 +1,25 @@
 <?php
-include_once("Connection.php");
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "DrawingLand_DB";
 $Nickname = $_POST['Nickname'];
 $UserKey = $_POST['UserKey'];
-$Connection = mysqli_connect('localhost','root','','DrawingLand_DB');
-$sqlinsert = "INSERT INTO User(Nickname,UserKey) VALUES ('$Nickname','$UserKey')";
-$insercao = mysql_connect($sqlinsert) or die ("Nao foi possivel inserir os dados");
-        mysqli_query($Connection,$sql) or die("DEU RUIM!!");
-        mysqli_close($Connection);
-        echo "dados devidamente inseridos";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "INSERT INTO User (Nickname, UserKey)
+        VALUES ($Nickname,$UserKey)";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
 ?>

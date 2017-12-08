@@ -1,0 +1,13 @@
+function Add(){
+  var user = JSON.stringify({
+    Nickname: $("#Nickname").val(),
+    UserPass: $("#UserKey").val();
+    });
+    tbUser.push(user);
+    localStorage.setItem("tbUser",JSON.stringfy(tbUser));
+    alert("Cadastro completado com sucesso");
+    return true;
+}
+$("frmCadastro").on("submit",function(){
+  return Add();
+})
