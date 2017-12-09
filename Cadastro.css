@@ -24,21 +24,21 @@ background-repeat:repeat;
 }
 
 #Nickname{
-        padding:5% 30%;
-        font-size:120%;
-        margin-left:-17%;
-        margin-top:10;
-        margin-bottom:10px;
-        
+  padding:5% 30% !important; 
+  font-size:120% !important;
+  margin-left:-17% !important;
+  margin-top:10 !important;
+  margin-bottom:10px !important;
+  
 
 
 }
-#UserKey{
-        padding:5% 30%;
-        font-size:120%;
-        margin-left:-17%;
-        margin-top:10;
-        margin-bottom:10px;
+#UserKey {
+        padding:5% 30% !important; 
+        font-size:120% !important;
+        margin-left:-17% !important;
+        margin-top:10 !important;
+        margin-bottom:10px !important;
         
 
 

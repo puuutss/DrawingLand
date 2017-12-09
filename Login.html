@@ -5,25 +5,20 @@
         
         <link rel = "stylesheet" type:"text/css" href="Login.css">
         <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-        <script type = "text/javascript" src = "http://code.jquery.com/jquery-1.7.2.min.js"></script>
-        <script type = "text/javascript" src = "Insert.js">
-                var user = {"Nickname":"$_POST['Nickname']","UserKey":"$_POST['UserKey']"}
-        </script>
-        
-        <link href="tbUser.JSON" type = "text/JSON">
-        
 </head>
 <body>
         <div id="area">
                 
-                <form name = "cadastro" id = "cadastro" method= "POST">
+                <form name = "cadastro" id = "cadastro" method= "POST" action = "Login.php">
                         
-                        <label id = "label1">Nome de Usuario</label><br><input type="text" name="Nickname" id = "input2"><br>
-                        <label id = "label2">Senha</label><br><input type="password" name="UserKey" id = "input2"><br>
+                        <label id = "label1">Nome de Usuario</label><br><input type="text" name="Nickname" id = "Nickname" value = "Exemplo: Joaozinho" placeholder = "Digite seu Nickname"><br>
+                        <label id = "label2">Senha</label><br><input type="password" name="UserKey" id = "UserKey" value = "CuriosoDemaisVoce" placeholder = "Digite sua senha"><br>
                         
                         <input type="submit" value= "Login" name="sent" id = "input1">
                         
-                        
-                </form>
+                 </form>
+                 <form name = "redirect" id = "redirect" action = "index.html">
+                         <input type="submit" value= "Cadastrar-se" name="Redirect" id = "input3" onSubmit = "index.html">
+                 </form>
         </div>
 </body>

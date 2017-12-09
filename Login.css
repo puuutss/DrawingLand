@@ -23,15 +23,41 @@ background-repeat:repeat;
         text-shadow: 1px 1px 10px black;
 }
 
-#input2{
+#Nickname{
         padding:5% 30%;
         font-size:120%;
         margin-left:-22%;
         margin-top:10;
         margin-bottom:10px;
-        
+        background-color:white;
+        font-color:black !important;
 
 
+}
+#UserKey{
+        padding:5% 30%;
+        font-size:120%;
+        margin-left:-22%;
+        margin-top:10;
+        margin-bottom:10px;
+        background-color:white;
+        font-color:black !important;
+
+
+}
+#input3{
+        font-family: 'Anton', sans-serif;
+        background-color:#28a94b;
+        border:none;
+        color:white;
+        text-align:center;
+        text-decoration:none;
+        display:inline-block;
+        margin-top:10;
+        margin-left:12%;
+        padding:5% 10%;
+        font-size:100%;
+        text-shadow: 1px 1px 5px black;
 }
 
 #label1{
