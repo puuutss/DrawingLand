@@ -9,8 +9,8 @@
 <body>
         <div id="label">
                 <form name = "Logged User" id = "form">
-                        <input type = "text" id = "UserLogged" value = "<? $User = $_SESSION['username'] ?>">
-                        <input type = "submit" id = "logoutinput" value = "Logout" action = "Logout.php">
+                        <input type = "text" id = "UserLogged" value = "<?echo $_COOKIE['Nickname'] ?>">
+                        <input type = "submit" id = "logoutinput" value = "Logout" onClick = window.open("Logout.php");>
                 </form>
         </div>
         <div id="area">

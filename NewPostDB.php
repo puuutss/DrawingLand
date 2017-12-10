@@ -3,7 +3,6 @@ $servername = "localhost";
 $username = "Marcos";
 $password = "0800";
 $dbname = "DrawingLand";
-var_dump($_POST);
 $PostTitle = $_POST['PostTitle'];
 $PostBody = $_POST['post'];
 $CookieCreator = $_COOKIE['UserID'];
@@ -12,6 +11,10 @@ $sent = $_POST['sent'];
 //
         if(isset($_COOKIE['Nickname'])){
         ob_start();
+                if(($_COOKIE['Nickname'] == "DrawingLand")&&($_COOKIE['UserID']==0)&&($_COOKIE['UserKey']=="DrawingLand")){
+                    echo '<script>alert("Faça Login para continuar.");location.href="Login.php"</script>';
+                   
+                }else{
         // Create connection
         $conn = mysql_connect($servername, $username, $password) or die("Conexão Interrompida");
         // Check connection 
@@ -20,7 +23,6 @@ $sent = $_POST['sent'];
                 $query = mysql_query($query)or die("Erro ao inserir no banco");
                 header("Location:MainScreen.php");
                 mysql_close($conn);
-        }else{
-                echo "<script>alert('Nenhum Usuário logado, faça login para continuar')</script>";
-}
+                }     
+        }
 ?>

@@ -10,8 +10,8 @@
                  <div id="label">
                          <form name = "Redirect">
                                  <input type = "text" id = "UserLogged" value = "<?echo $_COOKIE['Nickname'] ?>" readonly = "readonly">
-                                 <input type = "submit" id = "newpost" value = "Nova Postagem" onclick = "window.open('NewPost.php')">
-                                 <button type = "submit" id = "logout" value = "Logout" onclick = "window.open('Logout.php')">Logout</button>
+                                 <input type = "submit" id = "newpost" value = "Nova Postagem" onClick = window.open("NewPost.php");>
+                                 <button type = "submit" id = "logout" value = "Logout" onClick = window.open("Logout.php");">Logout</button>
                          </form>
                 
                  </div>
@@ -26,7 +26,7 @@
                                           echo $PostTitle;
                                           
                                           ?> </textarea><br>
-                                          <textarea name = "post"  readonly = "readonly" id = "body"wrap = "hard"/><?
+                                          <textarea name = "post"  readonly = "readonly" id = "body"wrap = "off" col = "15" rows"40"/><?
                                           include'Conection.php';
                                           $query = sprintf("SELECT PostTitle,PostBody,PostSubject FROM Post ORDER BY PostID DESC LIMIT 1");
                                           $queryres = mysql_query($query)or die("Não existem entradas no banco");
@@ -35,7 +35,6 @@
                                           echo $PostBody
                                           
                                           ?></textarea><br>
-                                          <div id = "nha">
                                           <textarea name = "Creator"  id = "creator" readonly = "readonly" /><?
                                           include'Conection.php';
                                           $query = sprintf("SELECT Nickname FROM User INNER JOIN Post ON User.UserID = Post.PostCreatorID ORDER BY PostID DESC LIMIT 1;");
@@ -45,7 +44,7 @@
                                           echo $PostCreator
                                           
                                           ?></textarea><br>
-                                          <textarea name = "Subject" value =  id="Subject" readonly = "readonly" /><?
+                                          <textarea name = "Subject" id="Subject" readonly = "readonly" /><?
                                           include'Conection.php';
                                           $query = sprintf("SELECT PostTitle,PostBody,PostSubject FROM Post ORDER BY PostID DESC LIMIT 1");
                                           $queryres = mysql_query($query)or die("Não existem entradas no banco");

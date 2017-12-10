@@ -17,8 +17,8 @@
                         <input type="submit" value= "Login" name="sent" id = "input1">
                         
                  </form>
-                 <form name = "redirect" id = "redirect" action = "index.html">
-                         <input type="submit" value= "Cadastrar-se" name="Redirect" id = "input3" onSubmit = "index.html">
+                 <form name = "redirect" id = "redirect" action = "Cadastro.php">
+                         <input type="submit" value= "Cadastrar-se" name="Redirect" id = "input3" onSubmit = "Cadastro.php">
                  </form>
         </div>
 </body>
