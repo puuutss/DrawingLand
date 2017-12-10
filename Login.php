@@ -1,45 +1,24 @@
-<?php
-$Nickname = (isset($_POST['Nickname'])) ? $_POST['Nickname'] : '';
-$UserKey = (isset($_POST['UserKey'])) ? $_POST['UserKey'] : '';
- 
-if (!empty($Nickname) && !empty($UserKey)){
-        $servername = "localhost";
-        $username = "DrawingLand";
-        $password = "0800niemeyer";
-        $dbname = "DrawingLand";
+<html>
 
-        // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        } 
-        if(isset($_POST['Nickname'])&&$_POST['UserKey']==true){
-                $Nickname = $_POST['Nickname'];
-                $UserKey = $_POST['UserKey'];
-        }else{
-                $Nickname = $UserKey = false;
-        }
-        class User{
-                private $Nickname;
-                private $UserKey;
-        }
-        $confirmation = mysql_query("SELECT * FROM 'User' WHERE Nickname = '$Nickname AND UserKey = '$UserKey';");
-        if(!$confirmation){
-                die("DEU MERDA");
-        }else{
-                $cont = mysql_num_rows($confirmation);
-                if($cont == 1){
-                        setcookie("login",$Nickname);
-                        setcookie("senha",$UserKey);
-                        echo "<script>alert('Usuário Logado');</script>";
-                }else{
-                        echo "<script>alert('Login ou senha errados.');</script><?php header('Location: Login.html'); ?>";
+<head>
+        <title>DrawingLand - Login</title>
+        
+        <link rel = "stylesheet" type:"text/css" href="Login.css">
+        <link href="font.tff" rel="stylesheet">
+</head>
+<body>
+        <div id="area">
                 
-                }
-        }   
-}
-        
-        
-        $conn->close();
-?>
+                <form name = "cadastro" id = "cadastro" method= "POST" action = "LoginDBConnect.php">
+                        
+                        <label id = "label1">Nome de Usuario</label><br><input type="text" name="Nickname" id = "Nickname" value = "Exemplo: Joaozinho" placeholder = "Digite seu Nickname"><br>
+                        <label id = "label2">Senha</label><br><input type="password" name="UserKey" id = "UserKey" value = "CuriosoDemaisVoce" placeholder = "Digite sua senha"><br>
+                        
+                        <input type="submit" value= "Login" name="sent" id = "input1">
+                        
+                 </form>
+                 <form name = "redirect" id = "redirect" action = "index.html">
+                         <input type="submit" value= "Cadastrar-se" name="Redirect" id = "input3" onSubmit = "index.html">
+                 </form>
+        </div>
+</body>

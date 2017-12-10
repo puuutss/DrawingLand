@@ -1,9 +1,10 @@
 <?php
-$servidor = "127.0.0";
-$usuario = "root";
-$senha = "";
-$banco = "DrawingLand_DB";
+$servername = "localhost";
+$username = "Marcos";
+$password = "0800";
+$dbname = "DrawingLand";
 
-$conexao = mysql_connect($servidor,$usuario,$senha);
-$db = mysql_select_db($banco,$conexao)or die ("Erro ao conectar ao banco");        
+//
+        $conn = mysql_connect($servername, $username, $password) or die("Conexão Interrompida");
+        mysql_select_db($dbname) or die ("Erro ao selecionar o banco");       
 ?>

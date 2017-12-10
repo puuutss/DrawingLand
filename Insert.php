@@ -22,15 +22,15 @@ class User{
 }
 function setProduto(){
        //realiza o insert no banco de dados passando os valores do objeto criado
-       $insertProdutos = mysql_query("INSERT INTO 'User' (Nickname, UserKey)
+       $insertProdutos = mysql_query("INSERT INTO User (Nickname, UserKey)
         VALUES ('$this->$Nickname','this->$UserKey)'");
 
        if($insertProdutos){
            $resposta="Inserido com sucesso";
-           echo "<script>alert('Usuário cadastrado!')</script>"
+           echo "<script>alert('Usuário cadastrado!')</script>";
        }else{
            $resposta ="Erro ao inserir";
-           echo "<script>alert('Erro ao cadastrar usuario')</script>"
+           echo "<script>alert('Erro ao cadastrar usuario')</script>";
        }
       
        return $resposta;

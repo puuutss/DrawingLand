@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?
+include 'Insert.php';
+?>
 <html>
 
 <head>
@@ -10,12 +13,12 @@
 <body>
         <div id="area">
                 
-                <form name = "cadastro" id = "cadastro" action = "Insert.php" method = "POST">
+                <form name = "cadastro" id = "cadastro" action = "Insert2.php" method = "POST">
                         
                         <label id = "label1">Nome de Usuario</label><br><input type="text" name="Nickname" id = "Nickname"><br>
                         <label id = "label2">Senha</label><br><input type="password" name="UserKey" id = "UserKey"><br>
                         
-                        <input type="submit" value= "Cadastrar" name="sent" id = "input1" action = "Insert.php" method = "POST">
+                        <input type="submit" value= "Cadastrar" name="sent" id = "input1">
                         
                         
                 </form>
